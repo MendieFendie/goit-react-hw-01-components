@@ -1,0 +1,36 @@
+.statistics {
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.title {
+  display: flex;
+}
+
+.statlist {
+  display: flex;
+}
+
+.item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: 1px solid #757575;
+  background-color: aliceblue;
+}
+
+.label {
+  font-size: 16px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #757575;
+  padding-top: 5px;
+  margin-bottom: 5px;
+}
+
+.percentage {
+}
