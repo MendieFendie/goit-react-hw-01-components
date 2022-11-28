@@ -16,3 +16,4 @@ Transaction.propTypes = {
   currency: propTypes.string,
   id: propTypes.string,
 };
+console.log(css);
