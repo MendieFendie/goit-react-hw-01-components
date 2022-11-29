@@ -1,19 +1,11 @@
-import propTypes from 'prop-types';
 import css from './friends.module.css';
 
-export default function Friend({ avatar, name, status, id }) {
+export default function Friend({ avatar, name, status }) {
   return (
-    <li className={css.item} key={id}>
+    <li className={css.item}>
       <span className={status ? css.online : css.offline}></span>
       <img className={css.avatar} src={avatar} alt="User avatar" width="48" />
       <p className={css.name}>{name}</p>
     </li>
   );
 }
-
-Friend.propTypes = {
-  avatar: propTypes.string,
-  name: propTypes.string,
-  status: propTypes.bool,
-  id: propTypes.number,
-};

@@ -1,12 +1,11 @@
 import Statistics from './statistics';
 import css from './statistics.module.css';
+import PropTypes from 'prop-types';
 
-function StatisticsList({ data }) {
+function StatisticsList({ data, tittle }) {
   return (
     <div className={css.statistics}>
-      <h2 className={css.title}>
-        {data.tittle ? data.tittle : 'Upload stats'}
-      </h2>
+      {tittle && <h2 className={css.title}>{tittle}</h2>}
       <ul className={css.statlist}>
         {data.map(item => (
           <Statistics
@@ -21,3 +20,14 @@ function StatisticsList({ data }) {
 }
 
 export default StatisticsList;
+
+StatisticsList.propTypes = {
+  title: PropTypes.string,
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    }).isRequired
+  ),
+};
